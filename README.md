@@ -27,8 +27,16 @@ sudo mkfs.fat -F32 /dev/sda1
 sudo parted -s /dev/sda mkpart primary 551MiB 100%
 sudo mkfs.ext4 /dev/sda2
 sudo mkdir /media/{efi,data}
-sudo mount /dev/sda2 /media/data/
+sudo mount /dev/sda2 /media/data
 sudo mount /dev/sda1 /media/efi
 
-sudo grub2-install --target=i386-pc --recheck --boot-directory="/media/data/boot" /dev/sda
+sudo grub-install --target=i386-pc --recheck --boot-directory="/media/data/boot" /dev/sda
+sudo grub-install --target=x86_64-efi --recheck --removable --efi-directory="/media/efi" --boot-directory="/media/data/boot"
+
+sudo mkdir /media/data/boot/iso
+sudo chown 1000:1000 /media/data/boot/iso
 ```
+
+transfer your iso in the folder iso
+
+
