@@ -18,6 +18,7 @@ in my case, it'd sda
 
 2.
 
+```
 sudo parted -s /dev/sda mklabel msdos
 sudo parted -s /dev/sda mkpart primary 1MiB 551MiB
 sudo parted -s /dev/sda set 1 esp on
@@ -30,3 +31,4 @@ sudo mount /dev/sda2 /media/data/
 sudo mount /dev/sda1 /media/efi
 
 sudo grub2-install --target=i386-pc --recheck --boot-directory="/media/data/boot" /dev/sda
+```
