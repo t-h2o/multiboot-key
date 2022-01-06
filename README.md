@@ -3,8 +3,8 @@
 
 ## Documentation
 
-* [link](https://linuxconfig.org/how-to-create-multiboot-usb-with-linux)
-
+* [tutorial](https://linuxconfig.org/how-to-create-multiboot-usb-with-linux)
+* [gnu documentation](https://www.gnu.org/software/grub/manual/grub/grub.html)
 ## find your usb key in the list
 
 ```lsblk```
