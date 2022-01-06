@@ -49,7 +49,8 @@ fi
 if [ $1 = "mount" ]
 then
 	echo is mounting...
-	sudo mkdir -p /media/{efi,dat}
+	sudo mkdir -p /media/efi
+	sudo mkdir -p /media/dat
 	sudo mount $efi /media/efi
 	sudo mount $dat /media/dat
 	exit 0
